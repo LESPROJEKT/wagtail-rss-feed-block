@@ -16,5 +16,5 @@ class RSSFeedBlock(StructBlock):
     display_date = BooleanBlock(required=False, default=True)
 
     class Meta:
-        template = "wagtail_rss_feed/blocks/rss_feed_block.html"
+        template = "wagtail_rss_feed_block/blocks/rss_feed_block.html"
         icon = "comment"
