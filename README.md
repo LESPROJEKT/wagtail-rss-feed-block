@@ -1,8 +1,7 @@
 
 # Wagtail RSS feed
 
-
-Wagtail RSS feed app provides custom content block that can be used with any Wagtail page model.
+Wagtail RSS feed is a Django app that provides custom content block that can be used with any Wagtail page model.
 
 This way you can load any RSS feed and display it on a any Wagtail page.
 
@@ -11,7 +10,7 @@ This way you can load any RSS feed and display it on a any Wagtail page.
 1. Install "wagtail_rss_feed_block" using pip
     
     ```
-    $ pip install <path to repo folder>
+    $ pip install wagtail-rss-feed-block
     ```
 
 2. Add "wagtail_rss_feed_block" to your INSTALLED_APPS setting like this:
@@ -51,9 +50,17 @@ This way you can load any RSS feed and display it on a any Wagtail page.
 
 ## Development
 
-You can setup RSS feed block same way Quick start section does with only one difference. For local development it can be handy to install this packege in editable mode like this:
+1. Clone this repo:
+    
+    ```
+    $ git clone git@github.com:LESPROJEKT/wagtail-rss-feed-block.git
+    ```
 
-```
-$ pip install -e <path to repo folder>
-```
+2. Use pip to install this package from newly cloned repo folder to your local Django project ( -e argument stands for --editable and it's handy for local development. It will reload your Django project every time you make changes to wagtail-rss-feed-block.):
+    
+    ```
+    $ pip install -e <path to repo folder>
+    ```
+
+3. Now you can continue from step no. 2 of Quick start guide above.
 
