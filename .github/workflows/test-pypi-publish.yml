@@ -30,15 +30,8 @@ jobs:
         pip install setuptools wheel twine build
     - name: Build package
       run: python -m build
-    - name: Get current version
-      id: get_version      
-      run: |
-        pip install bumpver
-        echo "CURRENT_VERSION=$(bumpver show --no-fetch | grep 'Current Version: ' | cut -d ':' -f 2)" >> $GITHUB_OUTPUT
-    - name: Print version
-      run: echo ${{ steps.get_version.outputs.CURRENT_VERSION }}      
-    # - name: Publish package
-    #   env:
-    #     TWINE_USERNAME: __token__
-    #     TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
-    #   run: python -m twine upload --repository testpypi dist/*
+    - name: Publish package
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
+      run: python -m twine upload --repository testpypi dist/*
