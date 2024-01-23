@@ -16,9 +16,22 @@ classifiers = [
     'Intended Audience :: Developers',
     "Operating System :: OS Independent",
 ]
-
 dependencies = [    
     "bleach",
     "feedparser",
     "wagtail >= 4.2.4",    
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/LESPROJEKT/wagtail-rss-feed-block"
+"Bug Tracker" = "https://github.com/LESPROJEKT/wagtail-rss-feed-block/issues"
+
+[tool.bumpver]
+current_version = "0.1.0"
+version_pattern = "MAJOR.MINOR.PATCH[TAGNUM]"
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'version = "{version}"',
+]
+
